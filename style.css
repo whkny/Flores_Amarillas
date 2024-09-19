@@ -19,6 +19,29 @@ body {
   overflow: hidden;
   perspective: 1000px;
 }
+
+.animated-text {
+  position: absolute;
+  top: 20px; /* Ajusta la distancia desde la parte superior */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px; /* Cambia el tamaño de la fuente según sea necesario */
+  color: rgba(255, 255, 153, 0.7); /* Color amarillo pastel con 70% de transparencia */
+  text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.7); /* Bordes difuminados en amarillo más oscuro */
+  animation: fadeInOut 3s infinite; /* Llama a la animación */
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0; /* Comienza y termina invisible */
+    filter: blur(5px); /* Difuminación */
+  }
+  50% {
+    opacity: 1; /* Totalmente visible */
+    filter: blur(0); /* Sin difuminación */
+  }
+}
+
 .night {
   position: fixed;
   left: 50%;
